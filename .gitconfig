@@ -1,0 +1,20 @@
+[user]
+	email = <PUT EMAIL HERE>
+	name = <PUT NAME HERE>
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+[core]
+    editor = vim
+[alias]
+    stash-unapply = !git stash show -p | git apply -R
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    last = log -1 HEAD
+    plog = log --pretty=oneline --abbrev-commit
+    conflict = diff --name-only --diff-filter=U  # View all files that have merge conflicts
+[credential]
+	helper = cache --timeout 7200
