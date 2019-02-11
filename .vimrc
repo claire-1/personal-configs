@@ -37,6 +37,8 @@ set incsearch		" do incremental searching
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
+command W w " map uppercase W to lowercase w for writing
+
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
@@ -108,9 +110,10 @@ endif
 packadd matchit
 
 
-colorscheme torte
-
-
+"colorscheme torte "good C theme
+colorscheme peachpuff
+"colorscheme slate
+highlight Normal ctermbg=darkblue
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Jae's Vim settings
@@ -194,6 +197,8 @@ map <leader>ss :setlocal spell!<cr>
     "   - wrap text if I go longer than 76 columns
     "   - check spelling
     autocmd FileType text setlocal autoindent expandtab softtabstop=2 textwidth=76 spell spelllang=en_us
+
+    autocmd FileType python setlocal shiftwidth=2 softtabstop=2 expandtab
 
 " Don't do spell-checking on Vim help files
 """""""""autocmd FileType help setlocal nospell
@@ -364,3 +369,4 @@ Plug 'kien/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call plug#end()
+set mouse-=a
