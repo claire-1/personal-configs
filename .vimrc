@@ -111,9 +111,9 @@ packadd matchit
 
 
 "colorscheme torte "good C theme
-colorscheme torte
+colorscheme peachpuff
 "colorscheme slate
-"highlight Normal ctermbg=darkblue
+highlight Normal ctermbg=darkblue
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Jae's Vim settings
@@ -294,6 +294,9 @@ autocmd VimEnter * wincmd p
 "let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
 "let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
 "let g:ycm_autoclose_preview_window_after_completion = 1
+"https://github.com/Yggdroot/indentLine
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+"let g:indentLine_enabled = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
@@ -366,6 +369,9 @@ Plug 'nathanaelkane/vim-indent-guides'
 
 " Ctrlp
 Plug 'kien/ctrlp.vim'
+
+" indentLine
+Plug 'Yggdroot/indentLine'
 
 " All of your Plugins must be added before the following line
 call plug#end()
