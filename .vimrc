@@ -113,7 +113,7 @@ packadd matchit
 "colorscheme torte "good C theme
 colorscheme peachpuff
 "colorscheme slate
-highlight Normal ctermbg=darkblue
+"highlight Normal ctermbg=darkblue
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Jae's Vim settings
