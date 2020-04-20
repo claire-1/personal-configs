@@ -110,8 +110,8 @@ endif
 packadd matchit
 
 
-"colorscheme torte "good C theme
-colorscheme peachpuff
+colorscheme torte "good C theme
+"colorscheme peachpuff
 "colorscheme slate
 "highlight Normal ctermbg=darkblue
 
@@ -297,6 +297,7 @@ autocmd VimEnter * wincmd p
 "https://github.com/Yggdroot/indentLine
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 "let g:indentLine_enabled = 1
+"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
@@ -322,28 +323,28 @@ Plug 'craigemery/vim-autotag'
 Plug 'scrooloose/syntastic'
 
 " Convenient completion for XML/HTML
-Plug 'othree/xml.vim'
+"Plug 'othree/xml.vim'
 
 " Press t to toggle tagbar.
-Plug 'majutsushi/tagbar'
+"Plug 'majutsushi/tagbar'
 
 " gc to toggle comments
-Plug 'tomtom/tcomment_vim'
+"Plug 'tomtom/tcomment_vim'
 
 " Browse the file system
-Plug 'scrooloose/nerdtree'
+"Plug 'scrooloose/nerdtree'
 
 " Fuzzy search ctrlp
-Plug 'kien/ctrlp.vim'
+"Plug 'kien/ctrlp.vim'
 
 " Git plugin
 Plug 'tpope/vim-fugitive'
 
 " Snippets are separated from the engine. Add this if you want them:
-Plug 'honza/vim-snippets'
+"Plug 'honza/vim-snippets'
 
 " Skeltons for common filetypes
-Plug 'noahfrederick/vim-skeleton'
+"Plug 'noahfrederick/vim-skeleton'
 
 " PEP8 indentation for python
 Plug 'hynek/vim-python-pep8-indent'
@@ -368,10 +369,11 @@ Plug 'nathanaelkane/vim-indent-guides'
 " Plug 'Valloric/YouCompleteMe'
 
 " Ctrlp
-Plug 'kien/ctrlp.vim'
+"Plug 'kien/ctrlp.vim'
 
 " indentLine
 Plug 'Yggdroot/indentLine'
+
 
 " All of your Plugins must be added before the following line
 call plug#end()
