@@ -1,0 +1,10 @@
+# zshrc file for mobile dependencies 
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$ANDROID_HOME/tools/bin:$PATH"
+export PATH="$ANDROID_HOME/tools:$PATH"
+export PATH="$ANDROID_HOME/emulator:$PATH"
+export PATH="$ANDROID_HOME/platform-tools:$PATH"
+
+eval "$(nodenv init - --no-rehash)"
+eval "$(rbenv init - --no-rehash)"
+eval "$(jenv init - --no-rehash)"
