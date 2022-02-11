@@ -79,15 +79,14 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+# Set terminal editor as vim
+export EDITOR='vim'
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+# Escape with jk in terminal
+bindkey jk vi-cmd-mode
+
+# Use vim shortcuts for terminal (press ESC to activate)
+bindkey -v
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -95,25 +94,12 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH="$PATH:/Applications/SnowSQL.app/Contents/MacOS/snowsql"
+export PATH="$PATH:/usr/bin/openssl"
+export OPENSSL_ROOT_DIR="/usr/bin/openssl"
 
-
-#export JAVA_8_HOME="/Library/Java/JavaVirtualMachines/jdk2.8.0_261.jdk/Contents/Home"
-#export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk2.8.0_261.jdk/Contents/Home"
-
-export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
 export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
-
-#export JAVA_HOME="$JAVA_8_HOME"
-#export JAVA_HOME="$JAVA_11_HOME"
-
-alias java8='export JAVA_HOME=$JAVA_8_HOME'
 alias java11='export JAVA_HOME=$JAVA_11_HOME'
-
-# default to Java 8
-java8
 
 # Aliases
 alias ll='ls -alF'
@@ -128,18 +114,17 @@ alias gpo='git push origin'
 alias gc='git commit'
 alias gd='git diff'
 alias gk='git checkout'
+alias gcm='git checkout master'
+alias gamend='git commit --amend --no-edit'
+alias gamendall='git add . && git commit --amend --no-edit'
 alias dps='docker ps'
 alias rm='trash'
-alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/snowsql
-
-alias mvn-parallel-build="mvn install -T1C"
+alias commands='subl ~/Desktop/commands'
 
 PROMPT=${PROMPT/\%c/\%~}
 
-export PATH="$HOME/.jenv/bin:$PATH"
-export PATH="$PATH:`pwd`/flutter/bin"
+export PATH="${HOME}/bin:${HOME}/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-source ~/.zshrc.mobile
